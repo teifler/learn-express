@@ -26,14 +26,7 @@ function getWeather(req, res, next) {
 //we can define functions for routes as many as we want
 
 app.get('/', getWeather, (req, res) => {
-  res.send(`
-  <h1?>What color is the sky on a clear day?</h1?>
-  <form action="/result" method="POST">
-    <input type="text" name="color">
-    <button>Submit Answer</button>
-  </form>
-  <p>${req.visitorWeather ? 'It is raining' : 'It is not raining'}</p>
-  `)
+  res.render('home')
 })
 
 app.get('/about', (req, res) => {
